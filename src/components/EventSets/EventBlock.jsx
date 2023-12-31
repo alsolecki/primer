@@ -4,8 +4,9 @@ const EventBlock = ({time, event, color}) => {
     return (
         <div
             style={{
-                border: 'lightgrey 2px solid',
-                padding: '1rem'
+                border: 'rgb(240, 240, 240) 2px solid',
+                padding: '1rem',
+                margin: '1rem 0 '
             }}>
           
             <div style={{

@@ -4,13 +4,17 @@ import weeble from '/weeble.png'
 const Hero = () => {
   return (
     <div style={{
-        display: 'flex'
+        display: 'flex',
+        alignItems: 'center'
       }}>
-        <div>
+        <div style={{
+          border: 'none'
+        }}>
           <img
             src={weeble} alt="primer timeline key"
             style={{
-              width: '40%'
+              width: '70%', 
+              margin: '1rem'
             }}
           />
         </div>

@@ -18,9 +18,9 @@ const Cast = () => {
             }}>
                 <p>Philip</p>
                 <p>Robert</p>
-                <p>Kara</p>
-                <p>Rachel</p>
                 <p>Granger</p>
+                <p>Rachel</p>
+                <p>Kara</p>
             </div>
             <div style={{
                 display: 'flex',
