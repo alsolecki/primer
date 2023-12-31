@@ -15,6 +15,11 @@ const EventSet02 = () => {
         color={'grey'}
     />
     <EventBlock
+        time={''}
+        event={`Aaron constructs 'box2.' This is Aaron's box. It is placed alongside Abe's 'Box 1'.`}
+        color={'red'}
+    />
+    <EventBlock
         time={'Tuesday morning:'}
         event={`Abe and Aaron re-enact Abes movements from the previous day in preparation for them both to travel back 6 hours in time.`}
         color={'grey'}

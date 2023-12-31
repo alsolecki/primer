@@ -14,9 +14,10 @@ import EventSet10 from './components/EventSets/EventSet10.jsx'
 import EventSet11 from './components/EventSets/EventSet11.jsx'
 import TimelineNotes from './components/TimelineNotes.jsx'
 import Trivia from './components/Trivia.jsx'
-import timeline from '/primer-timeline.png'
-import timelineKey from '/timeline-key.png'
-import weeble from '/weeble.png'
+import timeline from '/primerTimeline.png'
+import diagram from '/Time_Travel_Method-2.svg'
+import Cast from './components/Cast.jsx'
+import Hero from './components/Hero.jsx'
 
 
 function App() {
@@ -24,71 +25,54 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>The definitive explaination and timeline</h1>
+      <div className="wrapper">
+
+        <Hero />
+
+        <Cast />
+
+        {/* <div>
+          <h2>Style Ideas</h2>
+          <ul>
+            <li>garage door motif</li>
+            <li>storage facility motif</li>
+            <li>white shirt and tie motif</li>
+            <li>weeble</li>
+            <li>box</li>
+          </ul>
+        </div> */}
+
+        <img
+          src={diagram} alt="primer timeline"
+          style={{
+            width: '100%'
+          }}
+        />
+        <img
+          src={timeline} alt="primer timeline"
+          style={{
+            width: '100%'
+          }}
+        />
+
+        <TimelineNotes />
+
+        <ColorCodes />
+
+        <EventSet01 />
+        <EventSet02 />
+        <EventSet03 />
+        <EventSet04 />
+        <EventSet05 />
+        <EventSet06 />
+        <EventSet07 />
+        <EventSet08 />
+        <EventSet09 />
+        <EventSet10 />
+        <EventSet11 />
+
+        {/* <Trivia /> */}
       </div>
-
-      <div>
-        <h2>Cast</h2>
-        <ul>
-          <li>Aaron</li>
-          <li>Abe</li>
-          <li>Philip</li>
-          <li>Robert</li>
-          <li>Rachel</li>
-          <li>Granger</li>
-        </ul>
-      </div>
-
-      <img
-        src={weeble} alt="primer timeline key"
-        style={{
-          width: '20%'
-        }}
-      />
-
-      <div>
-        <h2>Style Ideas</h2>
-        <ul>
-          <li>garage door motif</li>
-          <li>storage facility motif</li>
-          <li>white shirt and tie motif</li>
-          <li>weeble</li>
-          <li>box</li>
-        </ul>
-      </div>
-
-      <img
-        src={timeline} alt="primer timeline"
-        style={{
-          width: '100%'
-        }}
-      />
-      <img
-        src={timelineKey} alt="primer timeline key"
-        style={{
-          width: '30%'
-        }}
-      />
-
-      <TimelineNotes />
-
-      <ColorCodes />
-
-      <EventSet01 />
-      <EventSet02 />
-      <EventSet03 />
-      <EventSet04 />
-      <EventSet05 />
-      <EventSet06 />
-      <EventSet07 />
-      <EventSet08 />
-      <EventSet09 />
-      <EventSet10 />
-      <EventSet11 />
-
-
-      <Trivia />
     </>
 
   )

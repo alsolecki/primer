@@ -6,12 +6,12 @@ const EventSet01 = () => {
         <>
             <EventBlock
                 time={'Monday Morning:'}
-                event={`Abe sets up a box in secret, 'Failsafe box1'. This will allow him to undo any and all time alterations that he makes from this point on. He also creates 'Box 1' to use tomorrow.`}
+                event={`Abe sets up a box in secret, 'Failsafe box 1'. This will allow him to undo any and all time alterations that he makes from this point on. He also creates 'Box 1' to use tomorrow.`}
                 color={'red'}
             />
             <EventBlock
                 time={'Monday 9:00:'}
-                event={`Abe activates 'box 1' then spends 6 hours in a hotel room.`}
+                event={`Abe activates 'Box 1' then spends 6 hours in a hotel room.`}
                 color={'red'}
             />
             <EventBlock
