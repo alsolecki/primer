@@ -12,7 +12,8 @@ const EventBlock = ({time, event, color}) => {
             <div style={{
                 color: color,
                 display: 'flex',
-                alignItems: 'center'
+                flexDirection: 'column',
+                alignItems: 'start'
             }}>
                 <h4 style={{ paddingRight: '1rem' }}>{time}</h4>
                 <p>{event}</p>
