@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EventBlock = ({time, event, color}) => {
+const EventBlock = ({time, event, color, id }) => {
     return (
         <div
             style={{
@@ -15,6 +15,7 @@ const EventBlock = ({time, event, color}) => {
                 flexDirection: 'column',
                 alignItems: 'start'
             }}>
+                <h3>{id}</h3>
                 <h4 style={{ paddingRight: '1rem' }}>{time}</h4>
                 <p>{event}</p>
             </div>
