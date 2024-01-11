@@ -9,18 +9,24 @@ const Cast = () => {
                 justifyContent: 'space-evenly',
                 fontSize: '2rem'
             }}>
-                <div style={{
-                    border: "blue 2px solid",
+                <div
+                    className='castImgAaron' 
+                    style={{
+                    border: 'blue 5px solid',
                     width: '50%',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    color: 'ghostwhite'
                 }}>
                     <p>Aaron</p>
                 </div>
 
-                <div style={{
-                    border: 'green 2px solid',
+                <div
+                    className='castImgAbe' 
+                    style={{
+                    border: 'green 5px solid',
                     width: '50%',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    color: 'ghostwhite'
                 }}>
                     <p>Abe</p>
                 </div>
@@ -31,7 +37,13 @@ const Cast = () => {
                 justifyContent: 'space-evenly',
                 fontSize: '0.85rem'
             }}>
-                <p>Kara</p>
+
+                <div className="castImgKara">
+                    <p>Kara</p>
+                </div>
+
+
+                
                 <p>Philip</p>
                 <p>Robert</p>
                 <p>Granger</p>

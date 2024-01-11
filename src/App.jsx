@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import './App.css'
+import './components/Cast.css'
+import { Canvas } from '@react-three/fiber'
+import { Leva } from 'leva'
+
 import ColorCodes from './components/ColorCodes.jsx'
 import EventSet01 from './components/EventSets/EventSet01.jsx'
 import EventSet02 from './components/EventSets/EventSet02.jsx'
@@ -18,6 +22,7 @@ import timeline from '/primerTimelineNoted.png'
 import diagram from '/Time_Travel_Method-2.svg'
 import Cast from './components/Cast.jsx'
 import Hero from './components/Hero.jsx'
+import TimeTravel from './components/TimeTravel/TimeTravel.jsx'
 
 
 function App() {
@@ -43,11 +48,30 @@ function App() {
         </div> */}
 
         <img
-          src={diagram} alt="primer timeline"
+          src={diagram} alt="timetravel diagram"
           style={{
             width: '100%'
           }}
         />
+
+        <StrictMode>
+          <Leva collapsed/>
+          <Canvas
+            camera={{
+              fov: 45,
+              near: 0.1,
+              far: 300,
+              position: [- 10, 5, 10]
+            }}
+            style={{
+              border: 'red 2px solid',
+              height: '20rem'
+            }}
+          >
+            <TimeTravel />
+          </Canvas>
+        </StrictMode>
+
         <img
           src={timeline} alt="primer timeline"
           style={{
