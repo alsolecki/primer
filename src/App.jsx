@@ -61,11 +61,11 @@ function App() {
               fov: 45,
               near: 0.1,
               far: 300,
-              position: [- 10, 5, 10]
+              position: [- 10, 15, 15]
             }}
             style={{
               border: 'red 2px solid',
-              height: '20rem'
+              height: '26rem'
             }}
           >
             <TimeTravel />

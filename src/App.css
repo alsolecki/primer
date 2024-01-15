@@ -17,7 +17,7 @@
     background: #00000088;
     color: white;
     padding: 15px;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     border-radius: 30px;
     user-select: none;
