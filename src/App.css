@@ -23,3 +23,26 @@
     user-select: none;
 }
 
+.button-bank {
+    width: 100%;
+}
+
+.button-bank ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
+}
+
+.button-bank li {
+    list-style: none;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid purple;
+    text-align: center;
+}
+
+.button-bank li:hover {
+    border: 2px solid greenyellow;
+    cursor: pointer;
+}

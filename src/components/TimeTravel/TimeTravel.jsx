@@ -1,136 +1,91 @@
 import React, { useRef } from 'react'
 import { MeshReflectorMaterial, Float, Text, Html, TransformControls, OrbitControls, PivotControls } from "@react-three/drei"
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import { useFrame } from '@react-three/fiber'
+import Timeline from './Timeline.jsx'
 import * as THREE from 'three'
-import { useLoader } from '@react-three/fiber'
 
-const TimeTravel = () => {
+
+import EventOrb1 from './EventOrb1.jsx'
+import EventOrb2 from './EventOrb2.jsx'
+import EventOrb3 from './EventOrb3.jsx'
+import EventOrb4 from './EventOrb4.jsx'
+import EventOrb5 from './EventOrb5.jsx'
+import EventOrb6 from './EventOrb6.jsx'
+import EventOrb7 from './EventOrb7.jsx'
+import EventOrb8 from './EventOrb8.jsx'
+import EventOrb9 from './EventOrb9.jsx'
+
+const TimeTravel = ({ step }) => {
 
     const sphere1 = useRef()
+    const cubeRef = useRef()
+    const groupRef = useRef()
 
-    const timeline1Texture = useLoader(TextureLoader, '/timelines/primerTimeline01.png')
+    const stepPosition1 = [-4, 0, -2]
+    const vec = new THREE.Vector3()
+
+    useFrame((state) => {
+        if (step === 'step1') {
+            state.camera.lookAt(-4, 0, -2)
+            state.camera.position.lerp(vec.set(-4, 0, -2), .001)
+            state.camera.updateProjectionMatrix
+        } else if (step === 'step2') {
+            state.camera.lookAt(-0.5, 0, -2)
+            state.camera.position.lerp(vec.set(-0.5, 0, -2), .001)
+            state.camera.updateProjectionMatrix
+        }
+
+    })
+    
+
+    console.log(step)
+
+    // Animations 
+
+    useFrame((state, delta) => {
+        // const angle = state.clock.elapsedTime * 0.5
+        // state.camera.position.x = (angle) * 0.25
+        // state.camera.position.x = Math.sin(angle) * 8
+        // state.camera.position.z = Math.cos(angle) * 8
+        // console.log(sphere1.current.position)
+        state.camera.lookAt(-4, 0, -2)
+
+        // sphere1.current.position.x += delta * 0.1
+    })
+
 
     return (
         <>
-
             <OrbitControls makeDefault />
 
             <directionalLight position={[1, 2, 3]} intensity={4.5} />
             <ambientLight intensity={1.5} />
 
 
-            <group position={[0, 0, -2]}>
-                <Text
-                    font="./acme-v25-latin-regular.woff"
-                    fontSize={1.25}
-                    color="grey"
-                    position={[-6, -2, 0]}
-                >
-                    Timeline 1
-                </Text>
-                <mesh position={[0, 0, 0]} rotation-x={0} scale={[16, 2.5, 0]}>
-                    <planeGeometry />
-                    <meshStandardMaterial map={timeline1Texture} opacity={0.5} transparent />
-                </mesh>
-            </group>
+            <Timeline name="TimelineOne" position={[0, 0, -2]} />
 
+            <EventOrb1 step={step}/>
+            <EventOrb2 step={step}/>
+            <EventOrb3 step={step}/>
+            <EventOrb4 step={step}/>
+            <EventOrb5 step={step}/>
+            <EventOrb6 step={step}/>
+            <EventOrb7 step={step}/>
+            <EventOrb8 step={step}/>
+            <EventOrb9 step={step}/>
 
-            <mesh ref={sphere1} position={[-5, 0, -2]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="red" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > Original person on undisturbed timeline decides to time-travel</Html>
-            </mesh>
-
-            <mesh ref={sphere1} position={[-2, 0, -2]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="red" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > He activates a delayed switch and leaves the area to avoid encountering his double</Html>
-            </mesh>
-
-
-            <mesh ref={sphere1} position={[1, 0, -2]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="purple" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > The machine starts and the double exits, thus creating a new timeline</Html>
-            </mesh>
-
-            <mesh ref={sphere1} position={[4, 0, -2]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="red" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > Original checks stock price moves, avoids causative action, and prepares for entry into the box.</Html>
-            </mesh>
-
-
-            <mesh ref={sphere1} position={[7, 0, -2]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="red" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > Original enters the box, joinging the <strong>looped timestream</strong> active inside.</Html>
-            </mesh>
-
-            <mesh ref={sphere1} position={[4, 3, -4]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="teal" />
-                <Html
-                    position={[0, 3, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > Original waits out 6 hours of subjective time as he travels into the past, becoming his double</Html>
-            </mesh>
-
-
-
-            <mesh ref={sphere1} position={[1, 0, 1]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="blue" />
-                <Html
-                    position={[0, -4, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > The Double has 6 hours of casual influence on both his and new timeline and his original timeline</Html>
-            </mesh>
-
-
-            <mesh ref={sphere1} position={[7, 0, 1]} scale={0.5}>
-                <sphereGeometry />
-                <meshStandardMaterial color="blue" />
-                <Html
-                    position={[0, -4, 0]}
-                    wrapperClass="label"
-                    center
-                    distanceFactor={5}
-                > The Double has 6 hours of casual influence on both his and new timeline and his original timeline</Html>
-            </mesh>
-
+            {/* <EventOrb step={step} position={[-4, 0, -2]} color="red" html={"Original person on undisturbed timeline decides to time-travel"} /> */}
+            {/* <EventOrb step={step} position={[-0.5, 0, -2]} color="red" html={"He activates a delayed switch and leaves the area to avoid encountering his double"} /> */}
+            {/* <EventOrb step={step} position={[1, 0, -2]} color="purple" html={"The machine starts and the double exits, thus creating a new timeline"} /> */}
+            {/* <EventOrb step={step} position={[4, 0, -2]} color="red" html={"Original checks stock price moves, avoids causative action, and prepares for entry into the box."} /> */}
+            {/* <EventOrb step={step} position={[7, 0, -2]} color="red" html={"Original enters the box, joinging the looped timestream active inside."} /> */}
+            {/* <EventOrb step={step} position={[4, 3, -4]} color="red" html={"Original waits out 6 hours of subjective time as he travels into the past, becoming his double"} /> */}
+            {/* <EventOrb step={step} position={[1, 0, 1]} color="blue" /> */}
+            {/* <EventOrb step={step} position={[7, 0, 1]} color="blue" /> */}
+            {/* <EventOrb step={step} position={[10, 0, 1]} color="blue" /> */}
 
             <mesh
-                position={[1, 0, -1]}
+                position={[1, 0, -0.75]}
                 scale={[1, 1, 1]}
                 rotation={[- Math.PI * 0.5, 0, 0]}
             >
@@ -150,7 +105,6 @@ const TimeTravel = () => {
             </mesh>
 
 
-
             {/* <Float
                 speed={5}
                 floatIntensity={2}
@@ -164,27 +118,15 @@ const TimeTravel = () => {
                 </mesh>
             </Float> */}
 
-
-
-            <group position={[0, 0, 1]}>
-                <Text
-                    font="./acme-v25-latin-regular.woff"
-                    fontSize={1.25}
-                    color="grey"
-                    position={[-6, -2, 0]}
-                >
-                    Timeline 2
-                </Text>
-                <mesh position={[1, 0, 0]} rotation-x={0} scale={[16, 2.5, 0]}>
-                    <planeGeometry />
-                    <meshStandardMaterial map={timeline1Texture} opacity={0.5} transparent />
-                </mesh>
-            </group>
+            <Timeline
+                name="TimelineTwo"
+                position={[3, 0, 1]}
+            />
 
             <mesh
-                position={[4, 0, 0]}
+                position={[4, 0, -0.5]}
             >
-                <boxGeometry args={[6, 1, 3]} />
+                <boxGeometry args={[5.5, 1.5, 2.5]} />
                 <meshStandardMaterial color="blue" opacity={0.25} transparent />
             </mesh>
 
