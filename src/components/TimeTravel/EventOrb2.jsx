@@ -1,14 +1,33 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { useFrame } from '@react-three/fiber'
+import * as THREE from 'three'
 
 const EventOrb2 = ({ step }) => {
 
-    const ref = useRef()
+    const [ clicked, setClicked ] = useState(false)
+    const markerRef = useRef()
+    const vec = new THREE.Vector3()
+
+    // useFrame(state => {
+    //     if (clicked) {
+    //             console.log('orb2 clicked')
+    //             // console.log(markerRef.current.position)
+    //             state.camera.position.lerp(vec.set(-1.5, 5, 5), 0.1)
+    //             state.camera.lookAt([-0.5, 0, -2])
+    //             state.camera.updateProjectionMatrix()
+    //     }   
+    //     return null;
+    // })
 
   return (
      <mesh
-            ref={ref}
+            ref={markerRef}
             scale={ step === 'step2' ? 0.75 : 0.35}
-            onClick={(event) => {console.log(event.object.id)} }
+            onClick={() => 
+                { 
+                setClicked(!clicked) 
+                setTimeout(()=>{ setClicked(false) }, 500)
+                }}
             position={[-0.5, 0, -2]}
             style={{
 

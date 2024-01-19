@@ -54,6 +54,18 @@ function App() {
             <TimeTravel step={ step }/>
           </Canvas>
         </StrictMode>
+        
+        <div className="text-window">
+          <p>{ step === 'step1' ? 'Original person on undisturbed timeline decides to time-travel' : null }</p>
+          <p>{ step === 'step2' ? 'He activates a delayed switch and leaves the area to avoid encountering his double' : null }</p>
+          <p>{ step === 'step3' ? 'The machine starts and the double exits, thus creating a new timeline' : null }</p>
+          <p>{ step === 'step4' ? 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.' : null }</p>
+          <p>{ step === 'step5' ? 'Original enters the box, joining the looped timestream active inside.' : null }</p>
+          <p>{ step === 'step6' ? 'Original waits out 6 hours of subjective time as he travels into the past, becoming his double' : null }</p>
+          <p>{ step === 'step7' ? 'Double has 6 hour of casual influence on both his new timeline and his original timeline.' : null }</p>
+          <p>{ step === 'step8' ? 'Period of time when Original and Double exists ends as the Original enters the box.' : null }</p>
+          <p>{ step === 'step9' ? 'Double has created an altered future for the double alone. The original loses his existance in the timeloop; his future is only to enter the box.  ' : null }</p>
+        </div>
 
         <div className="button-bank">
           <ul>

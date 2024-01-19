@@ -46,3 +46,10 @@
     border: 2px solid greenyellow;
     cursor: pointer;
 }
+
+.text-window {
+    width: 90%;
+    height: 4rem;
+    margin: -4rem auto 0.25rem;
+    text-align: center;
+}
