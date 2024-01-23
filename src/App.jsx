@@ -21,15 +21,17 @@ import diagram from '/Time_Travel_Method-2.svg'
 import Cast from './components/Cast.jsx'
 import Hero from './components/Hero.jsx'
 import TimeTravel from './components/TimeTravel/TimeTravel.jsx'
+import { PerspectiveCamera } from 'three'
 
 
 function App() {
 
-  const [ step , setStep ] = useState('step0');
+  const [ step , setStep ] = useState('step1');
 
-  const cameraPosition0 = { fov: 45, near: 0.1, far: 300, position: [- 10, 15, 15] }
+  const cameraPosition0 = { fov: 60, near: 0.1, far: 300, position: [- 7, 12, 9] }
   const cameraPosition1 = { fov: 45, near: 0.1, far: 300, position: [- 5, 5, 5] }
  
+
 
   return (
     <>
@@ -46,26 +48,6 @@ function App() {
           }}
         />
 
-        <StrictMode>
-          <Canvas
-            camera={ cameraPosition0 }
-            style={{ border: 'red 2px solid', borderRadius: '2rem', height: '26rem'}}
-          >
-            <TimeTravel step={ step }/>
-          </Canvas>
-        </StrictMode>
-        
-        <div className="text-window">
-          <p>{ step === 'step1' ? 'Original person on undisturbed timeline decides to time-travel' : null }</p>
-          <p>{ step === 'step2' ? 'He activates a delayed switch and leaves the area to avoid encountering his double' : null }</p>
-          <p>{ step === 'step3' ? 'The machine starts and the double exits, thus creating a new timeline' : null }</p>
-          <p>{ step === 'step4' ? 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.' : null }</p>
-          <p>{ step === 'step5' ? 'Original enters the box, joining the looped timestream active inside.' : null }</p>
-          <p>{ step === 'step6' ? 'Original waits out 6 hours of subjective time as he travels into the past, becoming his double' : null }</p>
-          <p>{ step === 'step7' ? 'Double has 6 hour of casual influence on both his new timeline and his original timeline.' : null }</p>
-          <p>{ step === 'step8' ? 'Period of time when Original and Double exists ends as the Original enters the box.' : null }</p>
-          <p>{ step === 'step9' ? 'Double has created an altered future for the double alone. The original loses his existance in the timeloop; his future is only to enter the box.  ' : null }</p>
-        </div>
 
         <div className="button-bank">
           <ul>
@@ -105,11 +87,33 @@ function App() {
               onClick={() => setStep('step9')}
               style={ step === 'step9' ? { backgroundColor: 'limegreen'} : null }
             >9</li>
-
-
-
           </ul>
         </div>
+
+        <StrictMode>
+          <Canvas
+            camera={ cameraPosition0 }
+            style={{ height: '26rem'}}
+          >
+            <TimeTravel step={ step }/>
+          </Canvas>
+        </StrictMode>
+
+        <div className="text-window">
+          <p>{ step === 'step1' ? 'Original person on undisturbed timeline decides to time-travel' : null }</p>
+          <p>{ step === 'step2' ? 'He activates a delayed switch and leaves the area to avoid encountering his double' : null }</p>
+          <p>{ step === 'step3' ? 'The machine starts and the double exits, thus creating a new timeline' : null }</p>
+          <p>{ step === 'step4' ? 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.' : null }</p>
+          <p>{ step === 'step5' ? 'Original enters the box, joining the looped timestream active inside.' : null }</p>
+          <p>{ step === 'step6' ? 'Original waits out 6 hours of subjective time as he travels into the past, becoming his double' : null }</p>
+          <p>{ step === 'step7' ? 'Double has 6 hour of casual influence on both his new timeline and his original timeline.' : null }</p>
+          <p>{ step === 'step8' ? 'Period of time when Original and Double exists ends as the Original enters the box.' : null }</p>
+          <p>{ step === 'step9' ? 'Double has created an altered future for the double alone. The original loses his existance in the timeloop; his future is only to enter the box.  ' : null }</p>
+        </div>
+
+
+
+        <TimelineNotes />
 
         <img
           src={timeline} alt="primer timeline"
@@ -118,7 +122,6 @@ function App() {
           }}
         />
 
-        <TimelineNotes />
 
         <ColorCodes />
 
@@ -134,7 +137,6 @@ function App() {
         <EventSet10 />
         <EventSet11 />
 
-        {/* <Trivia /> */}
       </div>
     </>
 

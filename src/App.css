@@ -9,7 +9,6 @@
 }
 
 
-
 .label > div
 {
     font-family: Helvetica, Arial;
@@ -25,6 +24,7 @@
 
 .button-bank {
     width: 100%;
+    margin: 1.25rem auto 0.25rem
 }
 
 .button-bank ul {
@@ -48,8 +48,18 @@
 }
 
 .text-window {
-    width: 90%;
-    height: 4rem;
+    position: relative;
+    bottom: 2rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.25rem;
     margin: -4rem auto 0.25rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0.5rem
+}
+
+.text-window p {
+    color: whitesmoke;
+    font-size: 1.25rem;
 }

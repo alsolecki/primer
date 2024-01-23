@@ -11,15 +11,15 @@ const Timeline = ( { name, position }) => {
         <group position={position}>
             <Text
                 font="./acme-v25-latin-regular.woff"
-                fontSize={1.25}
+                fontSize={1.2}
                 color="grey"
                 position={[-4, -2, 0]}
             >
                 { name }
             </Text>
-            <mesh position={[2, 0, 0]} rotation-x={0} scale={[14, 2.5, 0]}>
-                <planeGeometry />
-                <meshStandardMaterial map={timeline1Texture} opacity={0.5} transparent />
+            <mesh>
+                <boxGeometry args={[14, 3, 0.10]} />
+                <meshStandardMaterial opacity={0.5} transparent />
             </mesh>
         </group>
     )
