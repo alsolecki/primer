@@ -17,7 +17,7 @@ const Scene9 = ({ step }) => {
 
     return (
         <>
-            {/* <Timeline name="TimelineOne" position={[0, 0, -2]} /> */}
+            <Timeline name="TimelineOne" position={[0, 0, -2]} />
 
             <EventOrb9 step={step} />
 
@@ -59,9 +59,9 @@ const Scene9 = ({ step }) => {
                 <meshStandardMaterial color={'teal'} opacity={0.5} transparent />
             </mesh>
 
-            <Timestamp positionX={1.0} positionZ={-3.0} name="9:00"/>
-            <Timestamp positionX={7.0} positionZ={-3.0} name="15:00"/>
-            <Timestamp positionX={7.0} positionZ={0} name="15:00" />
+            <Timestamp positionX={1.0} positionZ={1.0} name="9:00"/>
+           
+            <Timestamp positionX={7.0} positionZ={1.0} name="15:00" />
         </>
     )
 }

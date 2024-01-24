@@ -49,8 +49,9 @@ const Scene6 = ({ step }) => {
                 <meshStandardMaterial color={'teal'} opacity={0.5} transparent />
             </mesh>
 
-            <Timestamp positionX={1.0} positionZ={-3.0} name="9:00"/>
-            <Timestamp positionX={7.0} positionZ={-3.0} name="15:00"/>
+            <Timestamp positionX={1.0} positionZ={1.0} name="9:00" stampColor={"rgb(240, 240, 240)"}/>
+            <Timestamp positionX={4.0} positionZ={1.0} name="traveling" stampColor={"magenta"}/>
+            <Timestamp positionX={7.0} positionZ={1.0} name="15:00" stampColor={"rgb(240, 240, 240)"}/>
         </>
     )
 }

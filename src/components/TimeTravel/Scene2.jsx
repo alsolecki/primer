@@ -19,7 +19,8 @@ const Scene2 = ({ step }) => {
                 <boxGeometry args={[3.75, 0.5, 0.10]} />
                 <meshStandardMaterial color={'red'} opacity={0.5} transparent />
             </mesh>
-            <Timestamp positionX={-0.5} positionZ={-3.0} name="8:45"/>
+            <Timestamp positionX={-4.0} positionZ={1.0} name="start" stampColor={"rgb(240, 240, 240)"}/>
+            <Timestamp positionX={-0.5} positionZ={1.0} name="8:45"  stampColor={"magenta"}/>
         </>
     )
 }

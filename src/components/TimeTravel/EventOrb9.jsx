@@ -14,8 +14,8 @@ const EventOrb9 = ({ step }) => {
 
             }}
         >
-            <sphereGeometry />
-            <meshStandardMaterial color={ step === 'step9' ? 'limegreen' : 'blue'} />
+            <boxGeometry />
+            <meshStandardMaterial color={ step === 'step9' ? 'magenta' : 'blue'} />
             {/* {hovered ? <Html
                 position={[0, 3, 0]}
                 wrapperClass="label"
