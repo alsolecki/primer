@@ -11,14 +11,16 @@
 
 .label > div
 {
+    min-width: 12rem;
+    max-width: 20rem;
     font-family: Helvetica, Arial;
     position: absolute;
-    background: #00000088;
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 15px;
     white-space: normal;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 10px;
     user-select: none;
 }
 

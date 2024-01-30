@@ -10,7 +10,56 @@
     background-position: center center;
 }
 
-/* .castImgKara {
+.castImgKara {
     background-image: url('/cast/06-kara.png');
     background-position: center center;
-} */
+    background-size: cover;
+}
+
+.castImgPhilip {
+    background-image: url('/cast/05-philip.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgRobert {
+    background-image: url('/cast/04-robert.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgGranger1 {
+    background-image: url('/cast/03a-granger1.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgRachel {
+    background-image: url('/cast/07-rachel.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgLabtech1 {
+    background-image: url('/cast/10-tech1.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgLabtech2 {
+    background-image: url('/cast/11-tech2.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgWill {
+    background-image: url('/cast/08-will.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.castImgRachelsEx {
+    background-image: url('/cast/09-exboyfriend.png');
+    background-position: center center;
+    background-size: cover;
+}

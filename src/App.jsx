@@ -2,6 +2,7 @@ import React, { useState, StrictMode } from 'react'
 import './App.css'
 import './components/Cast.css'
 import { Canvas } from '@react-three/fiber'
+import { PresentationControls } from '@react-three/drei'
 
 import ColorCodes from './components/ColorCodes.jsx'
 import EventSet01 from './components/EventSets/EventSet01.jsx'
@@ -22,23 +23,20 @@ import Cast from './components/Cast.jsx'
 import Hero from './components/Hero.jsx'
 import TimeTravel from './components/TimeTravel/TimeTravel.jsx'
 import { PerspectiveCamera } from 'three'
+import ButtonBank from './components/ButtonBank.jsx'
 
 
 function App() {
 
-  const [ step , setStep ] = useState('step1');
+  const [step, setStep] = useState('step1');
 
-  const cameraPosition0 = { fov: 60, near: 0.1, far: 300, position: [- 7, 12, 9] }
-  const cameraPosition1 = { fov: 45, near: 0.1, far: 300, position: [- 5, 5, 5] }
- 
-
+  const cameraPosition0 = { fov: 50, near: 0.1, far: 300, position: [-3, 13, 13] }
 
   return (
     <>
       <div className="wrapper">
 
         <Hero />
-
         <Cast />
 
         <img
@@ -48,70 +46,26 @@ function App() {
           }}
         />
 
+        <ButtonBank step={step} setStep={setStep} />
 
-        <div className="button-bank">
-          <ul>
-            <li 
-              onClick={() => setStep('step1')}
-              style={ step === 'step1' ? { backgroundColor: 'magenta'} : null }
-            >1</li>
-            <li 
-              onClick={() => setStep('step2')}
-              style={ step === 'step2' ? { backgroundColor: 'magenta'} : null }
-            >2</li>
-            <li 
-              onClick={() => setStep('step3')}
-              style={ step === 'step3' ? { backgroundColor: 'magenta'} : null }
-            >3</li>
-            <li 
-              onClick={() => setStep('step4')}
-              style={ step === 'step4' ? { backgroundColor: 'magenta'} : null }
-            >4</li>
-            <li 
-              onClick={() => setStep('step5')}
-              style={ step === 'step5' ? { backgroundColor: 'magenta'} : null }
-            >5</li>
-            <li 
-              onClick={() => setStep('step6')}
-              style={ step === 'step6' ? { backgroundColor: 'magenta'} : null }
-            >6</li>
-            <li 
-              onClick={() => setStep('step7')}
-              style={ step === 'step7' ? { backgroundColor: 'magenta'} : null }
-            >7</li>
-            <li 
-              onClick={() => setStep('step8')}
-              style={ step === 'step8' ? { backgroundColor: 'magenta'} : null }
-            >8</li>
-            <li 
-              onClick={() => setStep('step9')}
-              style={ step === 'step9' ? { backgroundColor: 'magenta'} : null }
-            >9</li>
-          </ul>
-        </div>
 
         <StrictMode>
+
           <Canvas
-            camera={ cameraPosition0 }
-            style={{ height: '26rem'}}
+            camera={cameraPosition0}
+            style={{ height: '26rem' }}
           >
-            <TimeTravel step={ step }/>
+            <PresentationControls
+              global
+              config={{ mass: 2, tension: 500 }}
+              snap={{ mass: 4, tension: 1500 }}
+              rotation={[0, 0.3, 0]}
+              polar={[-Math.PI / 3, Math.PI / 3]}
+              azimuth={[-Math.PI / 1.4, Math.PI / 2]}>
+              <TimeTravel step={step} />
+            </PresentationControls>
           </Canvas>
         </StrictMode>
-
-        <div className="text-window">
-          <p>{ step === 'step1' ? 'Original person on undisturbed timeline decides to time-travel' : null }</p>
-          <p>{ step === 'step2' ? 'He activates a delayed switch and leaves the area to avoid encountering his double' : null }</p>
-          <p>{ step === 'step3' ? 'The machine starts and the double exits, thus creating a new timeline' : null }</p>
-          <p>{ step === 'step4' ? 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.' : null }</p>
-          <p>{ step === 'step5' ? 'Original enters the box, joining the looped timestream active inside.' : null }</p>
-          <p>{ step === 'step6' ? 'Original waits out 6 hours of subjective time as he travels into the past, becoming his double' : null }</p>
-          <p>{ step === 'step7' ? 'Double has 6 hour of casual influence on both his new timeline and his original timeline.' : null }</p>
-          <p>{ step === 'step8' ? 'Period of time when Original and Double exists ends as the Original enters the box.' : null }</p>
-          <p>{ step === 'step9' ? 'Double has created an altered future for the double alone. The original loses his existance in the timeloop; his future is only to enter the box.  ' : null }</p>
-        </div>
-
-
 
         <TimelineNotes />
 

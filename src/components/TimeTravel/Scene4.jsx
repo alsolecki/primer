@@ -1,43 +1,64 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import Timeline from './Timeline.jsx'
-import EventOrb1 from './EventOrb1.jsx'
-import EventOrb2 from './EventOrb2.jsx'
-import EventOrb3 from './EventOrb3.jsx'
-import EventOrb4 from './EventOrb4.jsx'
-import Timestamp from './Timestamp.jsx'
 import { useFrame } from '@react-three/fiber'
+import Pointer from './Pointer.jsx'
+import { Html, Float } from "@react-three/drei"
+import TimeUnit from './TimeUnit.jsx'
 
 const Scene4 = ({ step }) => {
 
+    const html = 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.'
+
     const torus1 = useRef()
+    const ref = useRef()
 
     useFrame((state, delta) => {
-        // torus1.current.rotation.y += delta * 0.05
+       
+        ref.current.rotation.y += delta * 2
+        ref.current.rotation.x += delta * 2
+
+        torus1.current.scale.x = ((Math.cos(state.clock.elapsedTime * 2) * 0.05) + 1)
+        torus1.current.scale.y = ((Math.sin(state.clock.elapsedTime * 5) * 0.05) + 1)
+        torus1.current.scale.z = ((Math.sin(state.clock.elapsedTime * 10) * 0.75) + 1)
+        // torus1.current.position.y = ((Math.cos(state.clock.elapsedTime) * 0.1))
+
     })
 
     return (
         <>
-            <Timeline name="TimelineOne" position={[0, 0, -2]} />
+            <Timeline name="TimelineOne" position={[-4.5, 0, -2.5]} />
 
-            {/* <EventOrb1 step={step} />
-            <EventOrb2 step={step} /> */}
-            {/* <EventOrb3 step={step} /> */}
-            <EventOrb4 step={step} />
+            <TimeUnit color="blue" opacity={0.25} positionX={-4} />
+            <TimeUnit color="blue" opacity={0.25} positionX={-3} />
+            <TimeUnit color="blue" opacity={0.25} positionX={-2} />
+            <TimeUnit color="blue" opacity={0.25} positionX={-1} />
+            <TimeUnit color="blue" opacity={0.25} positionX={0} />
+            <TimeUnit color="blue" opacity={0.25} positionX={1} />
+            <TimeUnit color="blue" opacity={0.25} positionX={2} />
+            <TimeUnit color="blue" opacity={0.25} positionX={3} />
 
-            <mesh position={[0, 0, -1.9]} rotation={[Math.PI * 0.5, 0, 0]}>
-                <boxGeometry args={[7.75, 0.5, 0.10]} />
-                <meshStandardMaterial color={'red'} opacity={0.5} transparent />
+            <mesh
+                ref={ref}
+                scale={step === 'step4' ? 0.75 : 0.35}
+                onClick={(event) => { console.log(event.object.id) }}
+                position={[4, 0, -2]}
+            >
+                <boxGeometry />
+                <meshStandardMaterial color={step === 'step4' ? 'magenta' : 'red'} />
             </mesh>
 
             <mesh ref={torus1} position={[1, 0, -2]}>
                 <torusGeometry args={[1, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={0.5} transparent />
+                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
             </mesh>
 
-            <Timestamp positionX={-4.0} positionZ={1.0} name="start" stampColor={"rgb(240, 240, 240)"}/>
-            <Timestamp positionX={-0.5} positionZ={1.0} name="8:45"  stampColor={"rgb(240, 240, 240)"}/>
-            <Timestamp positionX={1.0} positionZ={1.0} name="9:00" stampColor={"rgb(240, 240, 240)"}/>
-            <Timestamp positionX={4.0} positionZ={1.0} name="12:00" stampColor={"magenta"}/>
+            <Html
+                position={[5, -1, 4]}
+                wrapperClass="label"
+                center
+                distanceFactor={15}
+            > {html}</Html>
+
         </>
     )
 }

@@ -1,28 +1,39 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { Html } from "@react-three/drei"
 import Timeline from './Timeline.jsx'
-import EventOrb1 from './EventOrb1.jsx'
-import Timestamp from './Timestamp.jsx'
-import * as THREE from 'three'
 
 
 const Scene1 = ({ step }) => {
 
-    const torus1 = useRef()
+    const cube1 = useRef()
 
     useFrame((state, delta) => {
-        // torus1.current.rotation.y += delta * 2
-        // state.camera.position.set([-7, 12, 9])
-        // console.log(state.camera.position)
+        cube1.current.rotation.y += delta * 2
+        cube1.current.rotation.x += delta * 2
     })
+
+    const html = 'Original person decides to time-travel';
 
     return (
         <>
-            <Timeline name="TimelineOne" position={[0, 0, -2]} />
+            <Timeline name="TimelineOne" position={[-4.5, 0, -2.5]} />
 
-            <EventOrb1 step={step} />
+            <mesh
+                ref={cube1}
+                position={[-4, 0, -2]}
+            >
+                <boxGeometry args={[0.75, 0.75, 0.75]} />
+                <meshStandardMaterial color={step === 'step1' ? 'magenta' : 'red'} />
+            </mesh>
 
-            <Timestamp positionX={-4.0} positionZ={1.0} name="start" stampColor={"magenta"}/>
+            <Html
+                position={[0, -1, 3]}
+                wrapperClass="label"
+                center
+                distanceFactor={15}
+            > {html}</Html>
+
         </>
     )
 }
