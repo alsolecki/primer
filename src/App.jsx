@@ -53,7 +53,10 @@ function App() {
 
           <Canvas
             camera={cameraPosition0}
-            style={{ height: '26rem' }}
+            style={{ 
+              height: '26rem',
+              touchAction: 'none'
+             }}
           >
             <PresentationControls
               global

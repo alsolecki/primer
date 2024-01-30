@@ -87,7 +87,7 @@ const Scene9 = ({ step }) => {
             </mesh>
 
             <Html
-                position={[8, -1, 6]}
+                position={[6, -1, 6]}
                 wrapperClass="label"
                 center
                 distanceFactor={15}
