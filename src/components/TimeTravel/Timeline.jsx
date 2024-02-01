@@ -75,10 +75,6 @@ const Timeline = ({ name, position }) => {
                     <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
-                <mesh position={[14, 0, 0]}>
-                    <boxGeometry args={[1, 2, 0.10]} />
-                    <meshStandardMaterial opacity={0.5} transparent />
-                </mesh>
             </group>
 
         </group>

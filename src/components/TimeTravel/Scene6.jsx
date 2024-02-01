@@ -2,9 +2,8 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Timeline from './Timeline.jsx'
 import Timestream from './Timestream.jsx'
-import { Html, Text, Float } from "@react-three/drei"
+import { Html, Text, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
-import TimeUnitCurved from './TimeUnitCurved.jsx'
 import TimestreamUnits from './TimestreamUnits.jsx'
 
 
@@ -52,7 +51,7 @@ const Scene6 = ({ step }) => {
                 position={[0.5, 1.5, -3.75]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} opacity={0.25} transparent />
+                <meshStandardMaterial color={"hsl(120, 70%, 50%)"} opacity={0.25} transparent />
             </mesh>
 
             <mesh
@@ -61,7 +60,7 @@ const Scene6 = ({ step }) => {
                 position={[2.25, 2.5, -4.5]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} opacity={0.5} transparent />
+                <meshStandardMaterial color={"hsl(130, 70%, 50%)"} opacity={0.5} transparent />
             </mesh>
 
 
@@ -71,7 +70,7 @@ const Scene6 = ({ step }) => {
                 position={[4, 3.0, -4.75]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
+                <meshStandardMaterial color={"hsl(180, 70%, 50%)"} opacity={1.0} transparent />
             </mesh>
 
 
@@ -80,7 +79,7 @@ const Scene6 = ({ step }) => {
                 position={[5.75, 2.5, -4.5]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} opacity={0.5} transparent />
+                <meshStandardMaterial color={"hsl(210, 70%, 50%)"} opacity={0.5} transparent />
             </mesh>
 
             <mesh
@@ -88,7 +87,7 @@ const Scene6 = ({ step }) => {
                 position={[7.5, 1.5, -3.75]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} opacity={0.25} transparent />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} opacity={0.25} transparent />
             </mesh>
 
 
@@ -110,12 +109,12 @@ const Scene6 = ({ step }) => {
 
             <mesh ref={torus1} position={[0, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
 
             <mesh ref={torus3} position={[8, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
 
             <Float
@@ -124,7 +123,7 @@ const Scene6 = ({ step }) => {
                 floatIntensity={0.5}
                 floatingRange={[-0.05, 0.05]}
             >
-                <Text
+                {/* <Text
                     font="./acme-v25-latin-regular.woff"
                     fontSize={0.45}
                     color="magenta"
@@ -134,7 +133,12 @@ const Scene6 = ({ step }) => {
                 >
                     {`                 Time-Traveling
                     Backwards`}
-                </Text>
+                </Text> */}
+                <Svg
+                    src={'/svg/primer06.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[2.5, 4.5, -3]}
+                />
             </Float>
 
             <Text
@@ -155,17 +159,6 @@ const Scene6 = ({ step }) => {
             >
                 {`                         6:00 
                 Entered Machine`}
-            </Text>
-
-            <Text
-                font="./acme-v25-latin-regular.woff"
-                fontSize={0.45}
-                color="white"
-                position={[4.5, 2, -2]}
-                textAlign={'center'}
-                anchorX={'center'}
-            >
-                {`12:00`}
             </Text>
 
             <Html

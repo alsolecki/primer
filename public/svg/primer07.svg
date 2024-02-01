@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="83.962814"
+   height="39.885761"
+   viewBox="0 0 22.215161 10.553108"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="primer07.svg"
+   inkscape:version="1.3.1 (91b66b0, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="5.9168985"
+     inkscape:cx="41.998355"
+     inkscape:cy="19.942881"
+     inkscape:window-width="1312"
+     inkscape:window-height="449"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-2.3895831,-8.584303)">
+    <g
+       id="g44"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-63.306772,-47.382744)">
+      <polygon
+         fill="#cdcfff"
+         points="276.179,230.265 268.964,223.825 326.447,222.015 332.264,227.831 "
+         id="polygon33" />
+      <polygon
+         fill="#bfc0ed"
+         points="332.264,227.831 331.991,245.963 275.95,249.942 276.179,230.265 "
+         id="polygon34" />
+      <polygon
+         fill="#ffffff"
+         points="295.715,248.569 294.554,248.591 294.199,229.701 287.73,223.234 289.321,223.184 295.347,229.21 295.712,248.567 "
+         id="polygon35" />
+      <polygon
+         fill="#ffffff"
+         points="316.12,247.14 316.122,247.143 314.961,247.12 315.317,228.801 308.094,222.607 309.796,222.54 316.485,228.275 "
+         id="polygon36" />
+      <path
+         fill="#ffce85"
+         d="m 253.64,245.296 c 0,0 -1.396,1.394 -2.156,1.558 -4.729,1.028 -2.95,-3.432 -2.374,-3.871 0.577,-0.439 2.119,-0.952 2.119,-0.952 z"
+         id="path36" />
+      <polygon
+         points="276.179,230.265 275.95,249.942 270.118,242.178 268.964,223.825 "
+         id="polygon37" />
+      <polygon
+         fill="#8ce6aa"
+         points="253.589,245.329 250.931,242.15 262.274,232.669 264.93,235.848 "
+         id="polygon38" />
+      <path
+         fill="#8ce6aa"
+         d="m 276.154,232.281 -13.873,0.379 c 0,0 -2.714,7.491 13.771,8.487 z"
+         id="path38" />
+      <circle
+         fill="#ffffff"
+         cx="256.616"
+         cy="222.14101"
+         r="1.2359999"
+         id="circle38" />
+      <circle
+         fill="#ffffff"
+         cx="258.50699"
+         cy="217.66701"
+         r="1.2359999"
+         id="circle39" />
+      <circle
+         fill="#ffffff"
+         cx="253.76401"
+         cy="215.06799"
+         r="1.6670001"
+         id="circle40" />
+      <polygon
+         fill="#a9afd6"
+         points="273.538,225.641 272.083,224.43 278.748,224.188 280.142,225.036 "
+         id="polygon40" />
+      <polygon
+         fill="#bfc0ed"
+         points="276.179,230.265 274.68,216.419 266.493,211.529 268.964,223.825 "
+         id="polygon41" />
+      <path
+         d="m 262.837,235.615 c -0.003,-0.664 -0.209,7.92 0.162,10.982 l -1.411,0.941 c 0.082,-8.031 0.542,-12.992 0.558,-12.432 z"
+         id="path41" />
+      <path
+         fill="#ffce85"
+         d="m 258.062,250.098 c 0,0 -1.555,1.213 -2.329,1.284 -4.821,0.444 -2.511,-3.766 -1.885,-4.132 0.625,-0.366 2.22,-0.688 2.22,-0.688 z"
+         id="path42" />
+      <path
+         fill="#8ce6aa"
+         d="m 256.054,246.565 c 8.795,-4.251 10.252,-8.26 10.283,-8.297 v 0 l 0.831,0.316 -0.844,-0.274 v 0.003 l 3.938,1.275 c -0.151,0.531 -2.199,5.819 -12.412,10.708 v 0 z"
+         id="path43" />
+      <path
+         fill="#ffce85"
+         d="m 262.813,233.772 c 0,0 -3.604,0.619 -4.936,-0.054 -1.332,-0.672 -2.246,-5.125 -1.654,-6.294 0.592,-1.17 4.347,-2.522 5.306,-2.039 0.956,0.484 1.284,8.387 1.284,8.387 z"
+         id="path44" />
+    </g>
+  </g>
+</svg>

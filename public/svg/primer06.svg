@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="66.890999"
+   height="65.774002"
+   viewBox="0 0 17.698243 17.402704"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="primer06.svg"
+   inkscape:version="1.3.1 (91b66b0, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.5880438"
+     inkscape:cx="33.58376"
+     inkscape:cy="32.887001"
+     inkscape:window-width="1312"
+     inkscape:window-height="449"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-3.9073091,-3.4290967)">
+    <g
+       id="g23"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-91.343748,-5.3384012)">
+      <polygon
+         fill="#61647a"
+         points="370.674,90.933 364.749,91.147 370.581,98.911 "
+         id="polygon12" />
+      <polygon
+         fill="#3f4352"
+         points="363.595,72.794 364.749,91.147 370.674,90.933 370.809,79.233 "
+         id="polygon13" />
+      <polygon
+         fill="#61647a"
+         points="421.089,77.052 426.895,76.801 421.078,70.984 "
+         id="polygon14" />
+      <polygon
+         fill="#a4a8cf"
+         points="421.078,70.984 363.595,72.794 370.809,79.233 421.089,77.052 "
+         id="polygon15" />
+      <polygon
+         fill="#3f4352"
+         points="421.109,89.111 426.621,94.933 426.895,76.801 421.089,77.052 "
+         id="polygon16" />
+      <polygon
+         fill="#a4a8cf"
+         points="370.581,98.911 426.621,94.933 421.109,89.111 370.674,90.933 "
+         id="polygon17" />
+      <polygon
+         fill="#61647a"
+         points="421.109,89.111 421.089,77.052 370.809,79.233 370.674,90.933 "
+         id="polygon18" />
+      <g
+         id="g21">
+        <path
+           d="m 417.087,81.676 -1.447,0.535 c 0.615,1.766 0.438,3.008 0.438,3.008 0,0 -8.729,-2.531 -17.575,0.9 l 2.008,5.773 c 9.623,-2.055 16.677,-0.255 16.677,-0.255 0,0 1.923,-4.143 -0.101,-9.961 z"
+           id="path18" />
+        <path
+           fill="#aae6f2"
+           d="m 383.016,89.186 0.438,2.969 17.057,-0.262 -1.353,-6.43 c -9.029,1.745 -16.142,3.723 -16.142,3.723 z"
+           id="path19" />
+        <circle
+           fill="#fac473"
+           cx="400.505"
+           cy="91.892998"
+           r="2.0669999"
+           id="circle19" />
+        <polygon
+           fill="#aae6f2"
+           points="383.448,92.154 400.08,89.872 400.537,93.958 "
+           id="polygon19" />
+        <path
+           d="m 383.083,89.643 0.029,0.208 c 0.104,-0.023 11.104,-2.362 14.186,-2.581 l -0.229,-1.392 C 389.2,87.48 383.245,89.123 383.04,89.18 Z"
+           id="path20" />
+        <path
+           fill="#fac473"
+           d="m 383.448,92.154 c 0,0 0.05,-3.658 -0.821,-4.871 -0.872,-1.207 -5.413,-1.419 -6.478,-0.651 -1.063,0.768 -1.813,4.687 -1.188,5.559 0.63,0.87 8.487,-0.037 8.487,-0.037 z"
+           id="path21" />
+      </g>
+      <polygon
+         fill="#aae6f2"
+         points="392.043,50.56 392.291,60.974 387.629,47.502 393.872,47.299 392.696,33.137 398.136,50.442 "
+         id="polygon21" />
+      <polygon
+         fill="#aae6f2"
+         points="365.163,58.436 368.719,68.227 360.004,56.943 365.857,54.761 360.229,41.714 370.9,56.381 "
+         id="polygon22" />
+      <polygon
+         fill="#aae6f2"
+         points="417.705,56.21 413.858,65.891 414.84,51.668 420.664,53.925 425.126,40.433 423.358,58.486 "
+         id="polygon23" />
+    </g>
+  </g>
+</svg>

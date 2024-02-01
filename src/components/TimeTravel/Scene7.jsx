@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Timeline from './Timeline.jsx'
 import Timestream from './Timestream.jsx'
-import { Html, Float } from "@react-three/drei"
+import { Html, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 import TimestreamUnits from './TimestreamUnits.jsx'
 
@@ -33,12 +33,18 @@ const Scene7 = ({ step }) => {
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <mesh
+                position={[0, 0, -2]}
+            >
+                <tetrahedronGeometry args={[0.5, 2]} />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} />
+            </mesh>
+
+            <mesh
                 ref={ref}
-                onClick={(event) => { console.log(event.object.id) }}
                 position={[0, 0, 1]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} />
+                <meshStandardMaterial color={"hsl(120, 70%, 50%)"} />
             </mesh>
 
             <Timestream />
@@ -74,13 +80,38 @@ const Scene7 = ({ step }) => {
 
             <mesh ref={torus2} position={[0, 0, 0]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
 
             <mesh ref={torus3} position={[8, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
+
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer07.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-2.5, 3.5, 1.0]}
+                />
+            </Float>
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer03.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-0.5, 3.25, -2.25]}
+                />
+            </Float>
 
             <Html
                 position={[6, -2, 6]}

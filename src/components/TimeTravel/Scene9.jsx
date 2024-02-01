@@ -1,8 +1,7 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Timeline from './Timeline.jsx'
-import Timestream from './Timestream.jsx'
-import { Html } from "@react-three/drei"
+import { Html, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 import TimestreamUnits from './TimestreamUnits.jsx'
 
@@ -11,7 +10,7 @@ const Scene9 = ({ step }) => {
     const torus2 = useRef()
     const torus3 = useRef()
     const ref = useRef()
-    const html = 'Double has created an altered future for the double alone. The original loses his existance in the timeloop; his future is only to enter the box.'
+    const html = 'The Original loses his existance in the timeloop; his future is only to enter the box. The Double has created an altered future for The Double alone.'
 
     useFrame((state, delta) => {
 
@@ -26,12 +25,44 @@ const Scene9 = ({ step }) => {
 
             <mesh
                 ref={ref}
-                onClick={(event) => { console.log(event.object.id) }}
-                position={[11, 0, 1.15]}
+                position={[8, 0, 1.15]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={"hsl(290, 100%, 50%)"} />
+                <meshStandardMaterial color={"hsl(120, 100%, 50%)"} />
             </mesh>
+
+            <mesh
+                position={[8, 0, -2]}
+            >
+                <tetrahedronGeometry args={[0.5, 2]} />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} />
+            </mesh>
+
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer05.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[5.5, 4.0, -2]}
+                />
+            </Float>
+
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer09.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[6.5, 3.5, 1.0]}
+                />
+            </Float>
 
             <Timeline
                 name="TimelineTwo"

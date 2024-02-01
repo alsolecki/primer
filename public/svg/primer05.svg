@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.600998"
+   height="41.337997"
+   viewBox="0 0 21.854847 10.937345"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="primer05.svg"
+   inkscape:version="1.3.1 (91b66b0, 2023-11-16)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="5.7090332"
+     inkscape:cx="41.250417"
+     inkscape:cy="20.668999"
+     inkscape:window-width="1312"
+     inkscape:window-height="449"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-2.5541485,-8.8760453)">
+    <g
+       id="g51"
+       style="display:inline"
+       transform="matrix(0.26458333,0,0,0.26458333,-122.73135,-45.916517)">
+      <path
+         d="M 479.473,232.015"
+         id="path45" />
+      <polygon
+         points="500.035,225.825 499.809,245.503 493.976,237.739 492.822,219.386 "
+         id="polygon45" />
+      <polygon
+         fill="#cdcfff"
+         points="500.035,225.825 492.822,219.386 550.306,217.576 556.121,223.393 "
+         id="polygon46" />
+      <polygon
+         fill="#bfc0ed"
+         points="556.121,223.393 555.849,241.524 499.809,245.503 500.035,225.825 "
+         id="polygon47" />
+      <polygon
+         fill="#ffffff"
+         points="511.589,218.795 513.181,218.745 519.207,224.771 519.569,244.131 519.573,244.131 518.412,244.151 518.058,225.264 "
+         id="polygon48" />
+      <polygon
+         fill="#ffffff"
+         points="539.174,224.364 531.933,218.155 533.651,218.101 540.344,223.839 539.979,242.701 539.98,242.703 538.82,242.68 "
+         id="polygon49" />
+      <path
+         fill="#cdcfff"
+         d="m 481.609,234.064 9.093,1.081 9.226,0.022 0.021,-10.146 c 0,0 -24.534,-0.971 -18.34,9.043 z"
+         id="path49" />
+      <path
+         d="m 494.889,245.575 c 0,0 -0.901,-17.151 -12.886,-17.151 -2.419,0 -0.865,5.806 -0.865,5.806 l -7.618,-1.128 c 0.736,5.367 3,8.007 3,8.007 l 1.573,-0.435 -1.079,-2.8 10.444,1.646 1.076,1.807 -7.883,-1.11 c 0.732,5.39 3.674,8.211 3.674,8.211 l 1.579,-0.437 -1.775,-3.191 z"
+         id="path50" />
+      <polygon
+         fill="#a9afd6"
+         points="497.395,221.202 495.939,219.991 502.604,219.749 503.997,220.597 "
+         id="polygon50" />
+      <polygon
+         fill="#bfc0ed"
+         points="500.035,225.825 498.538,211.979 490.351,207.09 492.822,219.386 "
+         id="polygon51" />
+    </g>
+  </g>
+</svg>

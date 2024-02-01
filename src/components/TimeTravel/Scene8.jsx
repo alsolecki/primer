@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Timeline from './Timeline.jsx'
 import Timestream from './Timestream.jsx'
-import { Html, Float } from "@react-three/drei"
+import { Html, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 import TimestreamUnits from './TimestreamUnits.jsx'
 
@@ -35,11 +35,17 @@ const Scene8 = ({ step }) => {
 
             <mesh
                 ref={ref}
-                onClick={(event) => { console.log(event.object.id) }}
                 position={[4, 0, 1.15]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} />
+                <meshStandardMaterial color={"hsl(120, 70%, 50%)"} />
+            </mesh>
+
+            <mesh
+                position={[4, 0, -2]}
+            >
+                <tetrahedronGeometry args={[0.5, 2]} />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} />
             </mesh>
 
             <Timeline
@@ -85,14 +91,49 @@ const Scene8 = ({ step }) => {
 
             <mesh ref={torus2} position={[0, 0, 0]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={0.75} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={0.75} transparent />
             </mesh>
+
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer04.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[2.5, 4.5, -2]}
+                />
+                {/* <Text
+                    font="./acme-v25-latin-regular.woff"
+                    fontSize={0.45}
+                    color="magenta"
+                    position={[4.5, 2, -2]}
+                    textAlign={'center'}
+                    anchorX={'center'}
+                >
+                    {`Afternoon`}
+                </Text> */}
+            </Float>
 
             <mesh ref={torus3} position={[8, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={0.75} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={0.75} transparent />
             </mesh>
 
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Svg
+                    src={'/svg/primer08.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[2.5, 4.0, 1.0]}
+                />
+            </Float>
 
             <Html
                 position={[6, 0, 6]}

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Timeline from './Timeline.jsx'
-import { Html, Text, Float } from "@react-three/drei"
+import { Html, Text, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 import Timestream from './Timestream.jsx'
 
@@ -48,19 +48,20 @@ const Scene5 = ({ step }) => {
 
             <mesh
                 ref={ref}
-                onClick={(event) => { console.log(event.object.id) }}
                 position={[8, 0, -2]}
-                style={{
-
-                }}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={'magenta'} />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} />
             </mesh>
 
             <mesh ref={torus1} position={[0, 0, -2]} >
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
+            </mesh>
+
+            <mesh ref={torus3} position={[8, 0, -2]} >
+                <torusGeometry args={[1.25, 0.1, 24, 48]} />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
 
             <Text
@@ -73,12 +74,7 @@ const Scene5 = ({ step }) => {
                 Machine Started`}
             </Text>
 
-            <mesh ref={torus3} position={[8, 0, -2]} >
-                <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
-            </mesh>
-
-            <Text
+            {/* <Text
                 font="./acme-v25-latin-regular.woff"
                 fontSize={0.45}
                 color="white"
@@ -87,7 +83,7 @@ const Scene5 = ({ step }) => {
                 anchorX={'center'}
             >
                 {`Afternoon`}
-            </Text>
+            </Text> */}
 
             <Float
                 speed={15}
@@ -95,7 +91,12 @@ const Scene5 = ({ step }) => {
                 floatIntensity={0.5}
                 floatingRange={[-0.05, 0.05]}
             >
-                <Text
+                <Svg
+                    src={'/svg/primer05.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[5.5, 4.0, -2]}
+                />
+                {/* <Text
                     font="./acme-v25-latin-regular.woff"
                     fontSize={0.4}
                     color="magenta"
@@ -103,10 +104,10 @@ const Scene5 = ({ step }) => {
                 >
                     {`                         6:00 
                 Enter Machine`}
-                </Text>
+                </Text> */}
             </Float>
             <Html
-                position={[6, 0, 4]}
+                position={[7, 0, 4]}
                 wrapperClass="label"
                 center
                 distanceFactor={15}

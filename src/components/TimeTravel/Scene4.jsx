@@ -1,8 +1,7 @@
 import React, { useRef } from 'react'
 import Timeline from './Timeline.jsx'
 import { useFrame } from '@react-three/fiber'
-import Pointer from './Pointer.jsx'
-import { Html, Text, Float } from "@react-three/drei"
+import { Html, Text, Float, Svg } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 
 const Scene4 = ({ step }) => {
@@ -42,12 +41,12 @@ const Scene4 = ({ step }) => {
                 position={[4.5, 0, -2]}
             >
                 <tetrahedronGeometry args={[0.5, 2]} />
-                <meshStandardMaterial color={"hsl(290, 100%, 50%)"} />
+                <meshStandardMaterial color={"hsl(240, 70%, 50%)"} />
             </mesh>
 
             <mesh ref={torus1} position={[0, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={1.0} transparent />
             </mesh>
 
             <Text
@@ -68,7 +67,12 @@ const Scene4 = ({ step }) => {
                 floatIntensity={0.5}
                 floatingRange={[-0.05, 0.05]}
             >
-                <Text
+                <Svg
+                    src={'/svg/primer04.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[2.5, 4.5, -2]}
+                />
+                {/* <Text
                     font="./acme-v25-latin-regular.woff"
                     fontSize={0.45}
                     color="magenta"
@@ -77,11 +81,11 @@ const Scene4 = ({ step }) => {
                     anchorX={'center'}
                 >
                     {`Afternoon`}
-                </Text>
+                </Text> */}
             </Float>
 
             <Html
-                position={[5, -1, 4]}
+                position={[6, -1, 3]}
                 wrapperClass="label"
                 center
                 distanceFactor={15}
