@@ -4,9 +4,9 @@ const TimeUnit = ({color, opacity, positionX}) => {
     return (
         <mesh
             position={[positionX + 0.5, 0, -2]}
-            rotation={[Math.PI * 0.5, 0, 0]}
+            rotation={[Math.PI * 0.5, 0, -Math.PI * 0.5]}
         >
-            <boxGeometry args={[1.0, 0.15, 0.1]} />
+            <cylinderGeometry args={[0.05, 0.15, 1, 32]} />
             <meshStandardMaterial color={color} opacity={opacity} transparent />
         </mesh>
     )

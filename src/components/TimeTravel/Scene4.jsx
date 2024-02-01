@@ -2,18 +2,18 @@ import React, { useRef } from 'react'
 import Timeline from './Timeline.jsx'
 import { useFrame } from '@react-three/fiber'
 import Pointer from './Pointer.jsx'
-import { Html, Float } from "@react-three/drei"
+import { Html, Text, Float } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
 
 const Scene4 = ({ step }) => {
 
-    const html = 'Original checks stock price moves, avoids causative action, and prepares for entry into the box.'
+    const html = 'The Original remains remote - checking stock price moves and preparing for entry into the Time Machine.'
 
     const torus1 = useRef()
     const ref = useRef()
 
     useFrame((state, delta) => {
-       
+
         ref.current.rotation.y += delta * 2
         ref.current.rotation.x += delta * 2
 
@@ -26,31 +26,59 @@ const Scene4 = ({ step }) => {
 
     return (
         <>
-            <Timeline name="TimelineOne" position={[-4.5, 0, -2.5]} />
+            <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
-            <TimeUnit color="blue" opacity={0.25} positionX={-4} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-3} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-2} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-1} />
-            <TimeUnit color="blue" opacity={0.25} positionX={0} />
-            <TimeUnit color="blue" opacity={0.25} positionX={1} />
-            <TimeUnit color="blue" opacity={0.25} positionX={2} />
-            <TimeUnit color="blue" opacity={0.25} positionX={3} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-3.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-2.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-1.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={1.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={2.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={3.0} />
 
             <mesh
                 ref={ref}
-                scale={step === 'step4' ? 0.75 : 0.35}
                 onClick={(event) => { console.log(event.object.id) }}
-                position={[4, 0, -2]}
+                position={[4.5, 0, -2]}
             >
-                <boxGeometry />
-                <meshStandardMaterial color={step === 'step4' ? 'magenta' : 'red'} />
+                <tetrahedronGeometry args={[0.5, 2]} />
+                <meshStandardMaterial color={"hsl(290, 100%, 50%)"} />
             </mesh>
 
-            <mesh ref={torus1} position={[1, 0, -2]}>
-                <torusGeometry args={[1, 0.1, 24, 48]} />
+            <mesh ref={torus1} position={[0, 0, -2]}>
+                <torusGeometry args={[1.25, 0.1, 24, 48]} />
                 <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
             </mesh>
+
+            <Text
+                font="./acme-v25-latin-regular.woff"
+                fontSize={0.45}
+                color="white"
+                position={[-0.45, 2, -2]}
+                textAlign={'center'}
+                anchorX={'center'}
+            >
+                {`            12:00
+                Machine Started`}
+            </Text>
+
+            <Float
+                speed={15}
+                rotationIntensity={0.25}
+                floatIntensity={0.5}
+                floatingRange={[-0.05, 0.05]}
+            >
+                <Text
+                    font="./acme-v25-latin-regular.woff"
+                    fontSize={0.45}
+                    color="magenta"
+                    position={[4.5, 2, -2]}
+                    textAlign={'center'}
+                    anchorX={'center'}
+                >
+                    {`Afternoon`}
+                </Text>
+            </Float>
 
             <Html
                 position={[5, -1, 4]}

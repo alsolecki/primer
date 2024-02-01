@@ -4,6 +4,7 @@ import Timeline from './Timeline.jsx'
 import Timestream from './Timestream.jsx'
 import { Html, Float } from "@react-three/drei"
 import TimeUnit from './TimeUnit.jsx'
+import TimestreamUnits from './TimestreamUnits.jsx'
 
 const Scene7 = ({ step }) => {
 
@@ -11,72 +12,73 @@ const Scene7 = ({ step }) => {
     const torus2 = useRef()
     const torus3 = useRef()
     const ref = useRef()
-    const html = 'Double has 6 hour of casual influence on both his new timeline and his original timeline.'
+    const html = 'The Double exits the time machine, thus creating a second timeline.'
 
     useFrame((state, delta) => {
 
         ref.current.rotation.y += delta * 2
         ref.current.rotation.x += delta * 2
 
-        torus2.current.scale.x = ((Math.cos(state.clock.elapsedTime * 10) * 0.05) + 1)
+        torus2.current.scale.x = ((Math.cos(state.clock.elapsedTime * 2) * 0.05) + 1)
         torus2.current.scale.y = ((Math.sin(state.clock.elapsedTime * 5) * 0.05) + 1)
-        torus2.current.position.y = ((Math.cos(state.clock.elapsedTime) * 0.1))
+        torus2.current.scale.z = ((Math.sin(state.clock.elapsedTime * 10) * 0.75) + 1)
 
-        torus3.current.scale.x = ((Math.cos(state.clock.elapsedTime * 10) * 0.05) + 1)
+        torus3.current.scale.x = ((Math.cos(state.clock.elapsedTime * 2) * 0.05) + 1)
         torus3.current.scale.y = ((Math.sin(state.clock.elapsedTime * 5) * 0.05) + 1)
-        torus3.current.position.y = ((Math.cos(state.clock.elapsedTime) * 0.1))
+        torus3.current.scale.z = ((Math.sin(state.clock.elapsedTime * 10) * 0.75) + 1)
     })
 
     return (
         <>
-            <Timeline name="TimelineOne" position={[-4.5, 0, -2.5]} />
+            <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <mesh
                 ref={ref}
-                scale={step === 'step7' ? 0.75 : 0.35}
                 onClick={(event) => { console.log(event.object.id) }}
-                position={[1, 0, 1]}
+                position={[0, 0, 1]}
             >
-                <boxGeometry />
-                <meshStandardMaterial color={step === 'step7' ? 'magenta' : 'blue'} />
+                <tetrahedronGeometry args={[0.5, 2]} />
+                <meshStandardMaterial color={'magenta'} />
             </mesh>
 
             <Timestream />
 
-            <Timeline
-                name="TimelineTwo"
-                position={[0.5, 0, 1]}
+            <TimestreamUnits
+                hue1="hsl(230, 100%, 50%)"
+                hue2="hsl(221, 100%, 50%)"
+                hue3="hsl(212, 100%, 50%)"
+                hue4="hsl(203, 100%, 50%)"
+                hue5="hsl(194, 100%, 50%)"
+                hue6="hsl(185, 100%, 50%)"
+                hue7="hsl(176, 100%, 50%)"
+                hue8="hsl(167, 100%, 50%)"
+                hue9="hsl(158, 100%, 50%)"
+                hue10="hsl(149, 100%, 50%)"
+                hue11="hsl(140, 100%, 50%)"
             />
 
-            <TimeUnit color="blue" opacity={0.25} positionX={-4} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-3} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-2} />
-            <TimeUnit color="blue" opacity={0.25} positionX={-1} />
-            <TimeUnit color="blue" opacity={0.25} positionX={0} />
-            <TimeUnit color="blue" opacity={0.25} positionX={1} />
-            <TimeUnit color="blue" opacity={0.25} positionX={2} />
-            <TimeUnit color="blue" opacity={0.25} positionX={3} />
-            <TimeUnit color="blue" opacity={0.25} positionX={4} />
-            <TimeUnit color="blue" opacity={0.25} positionX={5} />
-            <TimeUnit color="blue" opacity={0.25} positionX={6} />
-            <TimeUnit color="blue" opacity={0.25} positionX={7} />
-            <mesh
-                position={[1, 0, -0.75]}
-                scale={[1, 1, 1]}
-                rotation={[- Math.PI * 0.5, 0, 0]}
-            >
-                <planeGeometry args={[0.75, 3]}
-                />
-                <meshStandardMaterial color="teal" transparent opacity={.5} />
-            </mesh>
+            <Timeline name="TimelineTwo" position={[-1.5, 0, 0.5]} />
 
-            <mesh ref={torus2} position={[1, 0, 1]}>
-                <torusGeometry args={[1, 0.1, 24, 48]} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-3.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-2.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-1.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={1.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={2.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={3.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={4.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={5.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={6.0} />
+            <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={7.0} />
+
+
+            <mesh ref={torus2} position={[0, 0, 0]}>
+                <torusGeometry args={[1.25, 0.1, 24, 48]} />
                 <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
             </mesh>
 
-            <mesh ref={torus3} position={[7, 0, -2]}>
-                <torusGeometry args={[1, 0.1, 24, 48]} />
+            <mesh ref={torus3} position={[8, 0, -2]}>
+                <torusGeometry args={[1.25, 0.1, 24, 48]} />
                 <meshStandardMaterial color={'teal'} opacity={1.0} transparent />
             </mesh>
 
@@ -86,6 +88,15 @@ const Scene7 = ({ step }) => {
                 center
                 distanceFactor={15}
             > {html}</Html>
+
+            <group
+                rotation={[0, -Math.PI * 0.5, 0]}
+                position={[-2, 0, -2.5]}
+            >
+                <TimeUnit color="hsl(132, 100%, 50%)" opacity={0.75} positionX={0.5} />
+                <TimeUnit color="hsl(126, 100%, 50%)" opacity={0.75} positionX={1.5} />
+                <TimeUnit color="hsl(120, 100%, 50%)" opacity={0.75} positionX={2.5} />
+            </group>
 
         </>
     )

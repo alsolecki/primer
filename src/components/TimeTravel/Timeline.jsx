@@ -20,55 +20,63 @@ const Timeline = ({ name, position }) => {
 
             <group position={[0, 0, 0]} > 
                 <mesh position={[0, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[1, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[2, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[3, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[4, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[5, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[6, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[7, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[8, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[9, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[10, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[11, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
                 <mesh position={[12, 0, 0]}>
-                    <boxGeometry args={[1, 3, 0.10]} />
+                    <boxGeometry args={[1, 2, 0.10]} />
+                    <meshStandardMaterial opacity={0.5} transparent />
+                </mesh>
+                <mesh position={[13, 0, 0]}>
+                    <boxGeometry args={[1, 2, 0.10]} />
+                    <meshStandardMaterial opacity={0.5} transparent />
+                </mesh>
+                <mesh position={[14, 0, 0]}>
+                    <boxGeometry args={[1, 2, 0.10]} />
                     <meshStandardMaterial opacity={0.5} transparent />
                 </mesh>
             </group>

@@ -30,7 +30,7 @@ function App() {
 
   const [step, setStep] = useState('step1');
 
-  const cameraPosition0 = { fov: 50, near: 0.1, far: 300, position: [-3, 13, 13] }
+  const cameraPosition0 = { fov: 50, near: 0.1, far: 300, position: [-4, 14, 12] }
 
   return (
     <>
