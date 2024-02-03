@@ -12,7 +12,7 @@ const Scene8 = ({ step }) => {
     const torus2 = useRef()
     const torus3 = useRef()
     const ref = useRef()
-    const html = 'Period of time when Original and Double exists ends as the Original enters the box.'
+    const html = 'There is a six hour period of time when The Original and The Double exist simultaneously.'
 
     useFrame((state, delta) => {
 

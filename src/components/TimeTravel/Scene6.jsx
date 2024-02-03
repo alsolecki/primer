@@ -157,7 +157,7 @@ const Scene6 = ({ step }) => {
                 color="magenta"
                 position={[7.5, 2, -2]}
             >
-                {`                         6:00 
+                {`                              6:00 
                 Entered Machine`}
             </Text>
 

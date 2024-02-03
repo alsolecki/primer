@@ -127,7 +127,7 @@ const Scene9 = ({ step }) => {
 
             <mesh ref={torus3} position={[8, 0, -2]}>
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
-                <meshStandardMaterial color={'white'} opacity={0.25} transparent />
+                <meshStandardMaterial color={'magenta'} opacity={0.5} transparent />
             </mesh>
 
             <Html
