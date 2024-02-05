@@ -37,14 +37,13 @@ function App() {
       <div className="wrapper">
 
         <Hero />
-        <Cast />
 
-        <img
+        {/* <img
           src={diagram} alt="timetravel diagram"
           style={{
             width: '100%'
           }}
-        />
+        /> */}
 
         <ButtonBank step={step} setStep={setStep} />
 
@@ -53,10 +52,10 @@ function App() {
 
           <Canvas
             camera={cameraPosition0}
-            style={{ 
+            style={{
               height: '26rem',
               touchAction: 'none'
-             }}
+            }}
           >
             <PresentationControls
               global
@@ -69,6 +68,8 @@ function App() {
             </PresentationControls>
           </Canvas>
         </StrictMode>
+
+        <Cast />
 
         <TimelineNotes />
 

@@ -31,6 +31,12 @@ const Scene8 = ({ step }) => {
 
     return (
         <>
+            <Svg
+                    src={'/svg/primer-title.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-6.75, 4, -7]}
+            />
+            
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <mesh
@@ -54,7 +60,6 @@ const Scene8 = ({ step }) => {
             />
 
             <Timestream />
-
 
             <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-3.0} />
             <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-2.0} />

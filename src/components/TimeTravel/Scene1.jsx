@@ -17,6 +17,12 @@ const Scene1 = ({ step }) => {
 
     return (
         <>
+            <Svg
+                    src={'/svg/primer-title.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-6.75, 4, -7]}
+            />
+
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <mesh
@@ -38,17 +44,6 @@ const Scene1 = ({ step }) => {
                     scale={[0.2, 0.2, 0]}
                     position={[-3.75, 4.5, -2]}
                 />
-                {/* <Text
-                    font="./acme-v25-latin-regular.woff"
-                    fontSize={0.45}
-                    color="magenta"
-                    position={[-3.75, 1.5, -2]}
-                    textAlign={'center'}
-                    anchorX={'center'}
-                >
-                    {`                      Original
-                        Person`}
-                </Text> */}
             </Float>
 
             <Html

@@ -30,6 +30,12 @@ const Scene7 = ({ step }) => {
 
     return (
         <>
+            <Svg
+                    src={'/svg/primer-title.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-6.75, 4, -7]}
+            />
+            
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <mesh

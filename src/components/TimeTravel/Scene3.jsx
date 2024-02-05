@@ -25,6 +25,12 @@ const Scene3 = ({ step }) => {
 
     return (
         <>
+            <Svg
+                    src={'/svg/primer-title.svg'}
+                    scale={[0.2, 0.2, 0]}
+                    position={[-6.75, 4, -7]}
+            />
+            
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
 
             <TimeUnit color="hsl(240, 100%, 50%)" opacity={0.5} positionX={-3.0} />
@@ -60,6 +66,19 @@ const Scene3 = ({ step }) => {
                 <torusGeometry args={[1.25, 0.1, 24, 48]} />
                 <meshStandardMaterial color={'magenta'} opacity={1} transparent />
             </mesh>
+
+            <Text
+                font="./acme-v25-latin-regular.woff"
+                fontSize={0.45}
+                color="magenta"
+                position={[-0.45, 2, -2]}
+                textAlign={'center'}
+                anchorX={'center'}
+            >
+                {`            12:00
+                Machine Started`}
+            </Text>
+
 
             <Float
                 speed={15}
