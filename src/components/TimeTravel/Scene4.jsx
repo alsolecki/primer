@@ -27,8 +27,8 @@ const Scene4 = ({ step }) => {
         <>
             <Svg
                     src={'/svg/primer-title.svg'}
-                    scale={[0.2, 0.2, 0]}
-                    position={[-6.75, 4, -7]}
+                    scale={[0.15, 0.15, 0]}
+                    position={[-6.5, 4, -7]}
             />
             
             <Timeline name="TimelineOne" position={[-3.5, 0, -2.5]} />
